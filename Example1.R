@@ -2,6 +2,8 @@ file <- "TCGA_breast_cancer_LumA_vs_Basal_PAM50.tsv"
 first10 <- c('NAT1','BIRC5','BAG1','BCL2','BLVRA','CCNB1','CCNE1','CDC6','CDC20','CDH3')
 nfold <- 3
 a = 1
+new <- c(1,4,6,7,8,9)
+me <- mean(new)
 header <- scan(file, nlines = 1, sep="\t", what = character())
 data <- read.table(file, skip = 2, header = FALSE, sep = "\t", quote = "", check.names=FALSE)
 names(data) <- header
